@@ -51,9 +51,9 @@
 </head>
 
 <body>
-	<h1 style="text-align:  left">MVP Healthcare</h1>
+	<h1 style="text-align:  left">Pals Healthcare</h1>
 	<p style="width: 400px">
-		melanCholy chatBot
+		Nursa chatBot
 	</p>
 	<div id="conversation" style="width: 400px; height: 400px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
@@ -89,7 +89,8 @@
 				// send it to the Lex runtime
 				var params = {
 					botAlias: '$LATEST',
-					botName: 'melancholyBot',
+					//name of bot
+					botName: 'nursaBot',
 					inputText: wisdom,
 					userId: lexUserId,
 					sessionAttributes: sessionAttributes
@@ -106,7 +107,7 @@
 						// show response and/or error/dialog status
 						var response = showResponse(data);
 						conversation.set(data,response);
-						alert(conversation.size);
+						//alert(conversation.size);
 					}
 					// re-enable input
 					wisdomText.value = '';
